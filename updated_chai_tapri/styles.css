@@ -320,3 +320,73 @@ button:focus-visible{
   .icon-btn svg{width:16px;height:16px}
   .play-btn svg{width:19px;height:19px}
 }
+
+/* =========================================================
+   ACTIVE LISTENER COUNT
+   ========================================================= */
+
+   .listener-count {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+  
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  
+    color: rgba(255, 255, 255, 0.75);
+  
+    font-family:
+      "DM Sans",
+      "Noto Sans Devanagari",
+      sans-serif;
+  
+    font-size: 15px;
+    font-weight: 500;
+  
+    white-space: nowrap;
+  
+    z-index: 10;
+  
+    text-shadow:
+      0 2px 10px rgba(0, 0, 0, 0.45);
+  }
+  
+  .listener-dot {
+    width: 9px;
+    height: 9px;
+  
+    border-radius: 50%;
+  
+    background: #49df80;
+  
+    box-shadow:
+      0 0 12px rgba(73, 223, 128, 0.9);
+  
+    animation: listenerPulse 1.8s ease-in-out infinite;
+  }
+  
+  #listenerNumber {
+    color: white;
+    font-weight: 700;
+  }
+  
+  @keyframes listenerPulse {
+  
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  
+    50% {
+      opacity: 0.55;
+      transform: scale(0.82);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  
+  }
