@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#15100c" />
+  <title>Chai Ki Tapri</title>
+  <meta name="description" content="Highway radio — music from the backend playlist." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <main class="stage" id="stage">
+    <img class="bg-art" src="chai tapri image.png" alt="Truck on the highway">
+    <div class="bg-overlay"></div>
+
+    <div class="top-time" id="clock">9:24 pm</div>
+
+    
+
+    <div class="hero-content">
+      <h1>चाय की टपरी</h1>
+    </div>
+
+    <div class="player-shell" aria-label="Music player">
+      <div class="player-art">
+        <img
+            id="albumArtwork"
+            src=""
+            alt=""
+            class="album-artwork"
+        >
+    </div>
+
+      <div class="song-details">
+        <div class="song-title" id="trackTitle">Tapri songs</div>
+        <div class="song-artist" id="trackSub">Playlist ready</div>
+
+        <div class="progress-row">
+          <span id="currentTime">0:00</span>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+
+      <div class="player-controls">
+        <button id="prevBtn" class="icon-btn" aria-label="Previous song" type="button">
+          <svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14l-11-7z"/></svg>
+        </button>
+
+        <button id="playPauseBtn" class="play-btn" aria-label="Play" type="button">
+          <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pauseIcon" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        </button>
+
+        <button id="nextBtn" class="icon-btn" aria-label="Next song" type="button">
+          <svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="setupMessage" class="sr-only" aria-live="polite">Playlist backend से लोड हो रही है…</div>
+    <div id="ytPlayer" class="yt-player"></div>
+  </main>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="script.js"></script>
+</body>
+</html>
